@@ -15,7 +15,7 @@ help:
 		'  help        - Show this help message'
 
 install:
-	@printf '%s\n' "Installing $(SKILL_NAME) to $(INSTALL_DIR)..."
+	@echo "Installing $(SKILL_NAME) to $(INSTALL_DIR)..."
 	@mkdir -p $(INSTALL_DIR)/scripts $(INSTALL_DIR)/references
 	@cp SKILL.md README.md LICENSE CHANGELOG.md $(INSTALL_DIR)/
 	@cp scripts/*.sh $(INSTALL_DIR)/scripts/
@@ -37,11 +37,18 @@ uninstall:
 	fi
 
 test:
-	@printf '%s\n' 'Running tests...' '' 'Testing scan-secrets.sh...'
+	@echo "Running tests..."
+	@printf '%s\n' \
+		'' \
+		'Testing scan-secrets.sh...'
 	@bash scripts/scan-secrets.sh . || true
-	@printf '%s\n' '' 'Testing check-dependencies.sh...'
+	@printf '%s\n' \
+		'' \
+		'Testing check-dependencies.sh...'
 	@bash scripts/check-dependencies.sh || true
-	@printf '%s\n' '' '✓ Tests complete!'
+	@printf '%s\n' \
+		'' \
+		'✓ Tests complete!'
 
 clean:
 	@echo "Cleaning temporary files..."
