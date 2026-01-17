@@ -1,0 +1,22 @@
+# Test outputs
+npm-audit.json
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary scan results
+scan-results/
+*.report
+
+# Environment
+.env
+.env.local
