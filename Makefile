@@ -1,4 +1,4 @@
-.PHONY: install uninstall test clean help
+.PHONY: install link uninstall test clean help
 
 SKILL_NAME := security-stance-analyzer
 INSTALL_DIR := $(HOME)/.config/claude/skills/$(SKILL_NAME)
@@ -9,6 +9,7 @@ help:
 		'' \
 		'Available targets:' \
 		'  install     - Install skill to ~/.config/claude/skills/' \
+		'  link        - Symlink skill for development' \
 		'  uninstall   - Remove skill from ~/.config/claude/skills/' \
 		'  test        - Run tests on scripts' \
 		'  clean       - Remove temporary files' \
@@ -26,6 +27,16 @@ install:
 		'' \
 		"Skill installed to: $(INSTALL_DIR)" \
 		"To verify, run: ls -la $(INSTALL_DIR)"
+
+link:
+	@echo "Creating symlink for $(SKILL_NAME)..."
+	@mkdir -p $(HOME)/.config/claude/skills
+	@ln -sf $(CURDIR) $(INSTALL_DIR)
+	@printf '%s\n' \
+		'✓ Symlink created!' \
+		'' \
+		"Skill linked to: $(INSTALL_DIR)" \
+		"Changes in $(CURDIR) will be reflected immediately"
 
 uninstall:
 	@echo "Uninstalling $(SKILL_NAME) from $(INSTALL_DIR)..."

@@ -27,6 +27,14 @@ make install
 
 This will copy all necessary files to `~/.config/claude/skills/security-stance-analyzer`.
 
+### Development Install
+
+For development, use a symlink so changes are reflected immediately:
+
+```bash
+make link
+```
+
 ### Manual Installation
 
 #### For Claude Code (CLI)
@@ -34,9 +42,6 @@ This will copy all necessary files to `~/.config/claude/skills/security-stance-a
 ```bash
 # Copy the skill to your skills directory
 cp -r security-stance-analyzer ~/.config/claude/skills/
-
-# Or symlink it for development
-ln -s /path/to/security-stance-analyzer ~/.config/claude/skills/
 ```
 
 #### For VS Code with GitHub Copilot
