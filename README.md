@@ -18,28 +18,49 @@ This skill enables AI agents to perform thorough security assessments covering:
 
 ## Installation
 
-### For Claude Code (CLI)
+### Quick Install (Recommended)
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/security-stance-analyzer.git
+cd security-stance-analyzer
+
+# Install using Make
+make install
+```
+
+This will copy all necessary files to `~/.config/claude/skills/security-stance-analyzer`.
+
+### Manual Installation
+
+#### For Claude Code (CLI)
 
 ```bash
 # Copy the skill to your skills directory
 cp -r security-stance-analyzer ~/.config/claude/skills/
 
-# Or symlink it
+# Or symlink it for development
 ln -s /path/to/security-stance-analyzer ~/.config/claude/skills/
 ```
 
-### For VS Code with GitHub Copilot
+#### For VS Code with GitHub Copilot
 
 ```bash
 # Copy to VS Code skills directory
 cp -r security-stance-analyzer ~/.vscode/agent-skills/
 ```
 
-### For Cursor
+#### For Cursor
 
 ```bash
 # Copy to Cursor skills directory
 cp -r security-stance-analyzer ~/.cursor/agent-skills/
+```
+
+### Uninstall
+
+```bash
+make uninstall
 ```
 
 ## Usage
