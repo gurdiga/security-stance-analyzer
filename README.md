@@ -1,20 +1,16 @@
 # Security Stance Analyzer Agent Skill
 
-A comprehensive agentic skill for analyzing the security posture of systems, codebases, and infrastructure.
+An agentic skill for analyzing the security posture of codebases with reference materials for common security frameworks.
 
 ## What It Does
 
-This skill enables AI agents to perform thorough security assessments covering:
+This skill provides:
 
-- **Authentication & Authorization**: Session management, access controls, RBAC
-- **Secrets Management**: Hardcoded credentials, API keys, environment variables
-- **Input Validation**: SQL injection, XSS, command injection, path traversal
-- **Data Protection**: Encryption at rest/in transit, sensitive data exposure
-- **Dependency Security**: Vulnerable packages, outdated libraries
-- **Network Security**: CORS, CSP, SSL/TLS, security headers
-- **Infrastructure**: Misconfigurations, default credentials, exposed services
-- **Logging & Monitoring**: Security event logging, audit trails
-- **Compliance**: OWASP Top 10, CWE Top 25, GDPR, PCI DSS
+- **Automated scanning tools** for secrets and vulnerable dependencies
+- **Reference materials** covering OWASP Top 10 and general security best practices
+- **Security checklists** to guide manual code review and assessment
+
+The skill helps AI agents identify common security issues and provide guidance based on established security frameworks.
 
 ## Installation
 
@@ -203,15 +199,14 @@ apt install nmap
 - May produce false positives (always validate)
 - Results quality depends on access level
 
-## Compliance Coverage
+## Security Frameworks Reference
 
-- **OWASP Top 10**: Full coverage with testing guidance
-- **CWE Top 25**: Most dangerous software weaknesses
-- **NIST Cybersecurity Framework**: Control mapping
-- **SOC 2**: Trust service criteria alignment
-- **GDPR/CCPA**: PII handling requirements
-- **PCI DSS**: Payment data protection
-- **HIPAA**: Healthcare data security
+The included reference materials cover common security frameworks and standards:
+
+- **OWASP Top 10**: Testing guidance for common web vulnerabilities
+- **CWE Top 25**: Reference for dangerous software weaknesses
+
+Note: This tool provides general security scanning and reference materials. It does not perform comprehensive compliance audits for regulatory frameworks like SOC 2, GDPR/CCPA, PCI DSS, HIPAA, or NIST CSF. For compliance requirements, consult with qualified auditors and use specialized compliance tools.
 
 ## Contributing
 
