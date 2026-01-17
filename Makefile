@@ -52,7 +52,6 @@ test:
 
 clean:
 	@echo "Cleaning temporary files..."
-	@find . -name "*.log" -delete
-	@find . -name "npm-audit.json" -delete
+	@find . -name "*.log" -o -name "npm-audit.json" -delete
 	@rm -rf scan-results/
 	@echo "✓ Clean complete!"
