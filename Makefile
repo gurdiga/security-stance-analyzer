@@ -15,21 +15,17 @@ help:
 		'  help        - Show this help message'
 
 install:
-	@echo "Installing $(SKILL_NAME) to $(INSTALL_DIR)..."
-	@mkdir -p $(INSTALL_DIR)
-	@mkdir -p $(INSTALL_DIR)/scripts
-	@mkdir -p $(INSTALL_DIR)/references
-	@cp SKILL.md $(INSTALL_DIR)/
-	@cp README.md $(INSTALL_DIR)/
-	@cp LICENSE $(INSTALL_DIR)/
-	@cp CHANGELOG.md $(INSTALL_DIR)/
+	@printf '%s\n' "Installing $(SKILL_NAME) to $(INSTALL_DIR)..."
+	@mkdir -p $(INSTALL_DIR)/scripts $(INSTALL_DIR)/references
+	@cp SKILL.md README.md LICENSE CHANGELOG.md $(INSTALL_DIR)/
 	@cp scripts/*.sh $(INSTALL_DIR)/scripts/
 	@chmod +x $(INSTALL_DIR)/scripts/*.sh
 	@cp references/*.md $(INSTALL_DIR)/references/
-	@echo "✓ Installation complete!"
-	@echo ""
-	@echo "Skill installed to: $(INSTALL_DIR)"
-	@echo "To verify, run: ls -la $(INSTALL_DIR)"
+	@printf '%s\n' \
+		'✓ Installation complete!' \
+		'' \
+		"Skill installed to: $(INSTALL_DIR)" \
+		"To verify, run: ls -la $(INSTALL_DIR)"
 
 uninstall:
 	@echo "Uninstalling $(SKILL_NAME) from $(INSTALL_DIR)..."
@@ -41,15 +37,11 @@ uninstall:
 	fi
 
 test:
-	@echo "Running tests..."
-	@echo ""
-	@echo "Testing scan-secrets.sh..."
+	@printf '%s\n' 'Running tests...' '' 'Testing scan-secrets.sh...'
 	@bash scripts/scan-secrets.sh . || true
-	@echo ""
-	@echo "Testing check-dependencies.sh..."
+	@printf '%s\n' '' 'Testing check-dependencies.sh...'
 	@bash scripts/check-dependencies.sh || true
-	@echo ""
-	@echo "✓ Tests complete!"
+	@printf '%s\n' '' '✓ Tests complete!'
 
 clean:
 	@echo "Cleaning temporary files..."
