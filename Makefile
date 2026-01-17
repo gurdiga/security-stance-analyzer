@@ -4,14 +4,15 @@ SKILL_NAME := security-stance-analyzer
 INSTALL_DIR := $(HOME)/.config/claude/skills/$(SKILL_NAME)
 
 help:
-	@echo "Security Stance Analyzer - Makefile"
-	@echo ""
-	@echo "Available targets:"
-	@echo "  install     - Install skill to ~/.config/claude/skills/"
-	@echo "  uninstall   - Remove skill from ~/.config/claude/skills/"
-	@echo "  test        - Run tests on scripts"
-	@echo "  clean       - Remove temporary files"
-	@echo "  help        - Show this help message"
+	@printf '%s\n' \
+		'Security Stance Analyzer - Makefile' \
+		'' \
+		'Available targets:' \
+		'  install     - Install skill to ~/.config/claude/skills/' \
+		'  uninstall   - Remove skill from ~/.config/claude/skills/' \
+		'  test        - Run tests on scripts' \
+		'  clean       - Remove temporary files' \
+		'  help        - Show this help message'
 
 install:
 	@echo "Installing $(SKILL_NAME) to $(INSTALL_DIR)..."
