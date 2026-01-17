@@ -22,7 +22,7 @@ This skill enables AI agents to perform thorough security assessments covering:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/security-stance-analyzer.git
+git clone https://github.com/gurdiga/security-stance-analyzer.git
 cd security-stance-analyzer
 
 # Install using Make

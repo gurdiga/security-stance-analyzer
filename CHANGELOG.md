@@ -46,4 +46,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Logging & Monitoring
 - Compliance (OWASP, CWE, NIST, SOC 2, GDPR, PCI DSS, HIPAA)
 
-[1.0.0]: https://github.com/yourusername/security-stance-analyzer/releases/tag/v1.0.0
+[1.0.0]: https://github.com/gurdiga/security-stance-analyzer/releases/tag/v1.0.0
